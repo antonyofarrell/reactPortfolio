@@ -95,6 +95,18 @@
     --border: 217 33% 20%;
   }
 
+  h1 {
+    font-weight: 300;
+  }
+
+  h2 {
+    font-weight: 300;
+  }
+
+  p {
+    font-weight: 200;
+  }
+
   * {
     @apply border-border;
   }
@@ -106,6 +118,7 @@
   body {
     @apply bg-background text-foreground transition-colors duration-300;
     font-feature-settings: "rlig" 1, "calt" 1;
+    font-family: "Manrope", sans-serif;
   }
 }
 
@@ -167,4 +180,22 @@
   margin: 0 auto;
   padding: 0;
   text-align: center;
+}
+
+/* GSAP STUFF */
+
+.gsaptext > h2 {
+  background: linear-gradient(
+    to right,
+    var(--color-foreground) 50%,
+    var(--color-background) 50%
+  );
+  background-size: 200% 100%;
+  background-position-x: 100%;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  line-height: 1.2;
+  font-size: 6vw;
+  padding: 10px;
 }
