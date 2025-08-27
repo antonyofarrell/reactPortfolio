@@ -18,7 +18,7 @@ export const GsapSection = () => {
           end: "+=1500", // Adjust for how long you want it pinned
           pin: true,
           scrub: 1,
-          markers: true,
+          markers: false,
         },
       })
       .fromTo(
