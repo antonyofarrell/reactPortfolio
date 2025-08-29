@@ -206,7 +206,7 @@
 .gsaptext > h2 {
   background: linear-gradient(
     to right,
-    var(--color-foreground) 50%,
+    var(--color-primary) 50%,
     var(--color-background) 50%
   );
   background-size: 200% 100%;
@@ -215,6 +215,4 @@
   background-clip: text;
   -webkit-background-clip: text;
   line-height: 1.2;
-  font-size: 6vw;
-  padding: 10px;
 }
