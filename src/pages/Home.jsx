@@ -19,6 +19,9 @@ export const Home = () => {
       {/* Theme Toggle */}
       <ThemeToggle />
 
+      {/* Fullscreen interactive cursor */}
+      <SplashCursor />
+
       {/* Background Effects */}
       <StarBackground />
 
