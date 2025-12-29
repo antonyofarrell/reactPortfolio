@@ -8,7 +8,7 @@ export const HeroSection = () => {
     >
       <div className="container max-w-4xl mx-auto text-center z-10">
         <div className="space-y-6">
-          <h1 className="text-4xl md:text-6xl font-light tracking-wider">
+          <h1 className="text-4xl md:text-6xl font-light">
             <span className="opacity-0 animate-fade-in">Hi, I'm</span>
             <span className="text-primary ml-2 opacity-0 animate-fade-in-delay-1">
               Antony
@@ -23,7 +23,7 @@ export const HeroSection = () => {
             As a Senior UX/UI designer and Head of Design, I have led teams and
             guided projects with precision, creating seamless digital
             experiences. My work focuses on charting clear paths through complex
-            systems—bringing order to the digital universe.
+            systems, bringing order to the digital universe.
           </p>
 
           <div>

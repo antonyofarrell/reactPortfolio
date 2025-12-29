@@ -1,12 +1,14 @@
 /** @type {import('tailwindcss').Config} */
-export default {
-  darkMode: 'class',
-  content: [
-    "./index.html",
-    "./src/**/*.{js,jsx,ts,tsx}",
-  ],
+module.exports = {
+  content: ["./src/**/*.{js,jsx,ts,tsx}", "./index.html"],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        // map to your CSS variables so bg-primary, text-primary-foreground work
+        primary: "hsl(var(--primary))",
+        "primary-foreground": "hsl(var(--primary-foreground))",
+      },
+    },
   },
   plugins: [],
-}
+};
