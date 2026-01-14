@@ -9,6 +9,7 @@ import { ProjectsSection } from "../components/Projects";
 import { ContactSection } from "../components/Contact";
 import { Footer } from "../components/Footer";
 import SplashCursor from "../components/SplashCursor";
+import SmoothScrollProvider from "../components/SmoothScrollProvider";
 
 export const Home = () => {
   return (
@@ -19,28 +20,26 @@ export const Home = () => {
       {/* Theme Toggle */}
       <ThemeToggle />
 
-      {/* Fullscreen interactive cursor */}
-      <SplashCursor />
-
       {/* Background Effects */}
       <StarBackground />
 
       {/* Navbar */}
       <Navbar />
-
       {/* Main Content */}
 
       <main>
+        {/* <SmoothScrollProvider> */}
         <HeroSection />
         <GsapSection />
         <AboutSection />
         <SkillsSection />
         <ProjectsSection />
         <ContactSection />
-      </main>
-      {/* Footer */}
 
-      <Footer />
+        {/* Footer should be inside the smooth content so it scrolls correctly */}
+        <Footer />
+        {/* </SmoothScrollProvider> */}
+      </main>
     </div>
   );
 };

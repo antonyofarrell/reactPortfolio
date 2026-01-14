@@ -1,14 +1,14 @@
 export const PROJECTS = [
   {
     id: "realise",
-    title: "Realise",
+    title: "Realise.me.uk — WordPress Website with Custom Motion Animation",
     description:
-      "A modern SaaS landing page template built with React and Tailwind CSS.",
+      "I designed and built Realise.me.uk, a fully responsive WordPress website for an event services company specialising in event registration, data-driven audience insights, training, and consultancy services. The site combines clean, professional branding with dynamic motion content to elevate the user experience and clearly communicate the breadth of Realise’s offerings.",
     image: "/projects/realise.webp",
     images: [
       "/projects/realise.webp",
-      "/img/heroBkgDiagonal_1_1.gif",
-      "/projects/realise-3.webp",
+      "/img/heroBkgDiagonal_1_1.mp4",
+      "/projects/realiseLogoAnimation.mp4",
     ],
     tags: ["Branding", "Wordpress", "Frontend"],
     demoUrl: "https://realise.me.uk/",

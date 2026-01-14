@@ -4,8 +4,14 @@ export default function ParallaxImage({
   src,
   alt,
   className = "",
-  speed = 0.15, // higher = more movement
+  speed = 0.55, // higher = more movement
   maxOffset = 60, // px clamp
+  // media options
+  controls = false,
+  loop = true,
+  muted = true,
+  playsInline = true,
+  poster = undefined,
 }) {
   const ref = useRef(null);
   const rafRef = useRef(null);
@@ -56,11 +62,25 @@ export default function ParallaxImage({
       className={`will-change-transform overflow-hidden ${className}`}
       aria-hidden={!alt}
     >
-      <img
-        src={src}
-        alt={alt}
-        className="w-full h-full object-cover pointer-events-none"
-      />
+      {typeof src === "string" && src.match(/\.(mp4|webm|ogg)(\?.*)?$/i) ? (
+        <video
+          src={src}
+          poster={poster}
+          autoPlay={!controls}
+          muted={muted}
+          loop={loop}
+          playsInline={playsInline}
+          controls={controls}
+          aria-label={alt}
+          className="w-full h-full object-cover pointer-events-none"
+        />
+      ) : (
+        <img
+          src={src}
+          alt={alt}
+          className="w-full h-full object-cover pointer-events-none"
+        />
+      )}
     </div>
   );
 }

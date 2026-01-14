@@ -1,20 +1,27 @@
 @import "tailwindcss";
 
+/* Consolidated Okomito font faces so different weights resolve via font-weight */
 @font-face {
-  font-family: "Okomito Bold";
-  src: url("/src/assets/fonts/okomito-bold.woff2") format("woff2");
-  font-weight: 700;
+  font-family: "Okomito";
+  src: url("/src/assets/fonts/okomito-light.woff2") format("woff2");
+  font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
-  font-family: "Okomito Medium";
+  font-family: "Okomito";
   src: url("/src/assets/fonts/okomito-medium.woff2") format("woff2");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
-
+@font-face {
+  font-family: "Okomito";
+  src: url("/src/assets/fonts/okomito-bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
 @theme {
   --color-border: hsl(var(--border));
   --color-background: hsl(var(--background));
@@ -125,13 +132,14 @@
   h3,
   h4 {
     font-weight: 700;
-    font-family: "Okomito Bold", sans-serif;
+    font-family: "Okomito", sans-serif;
     text-transform: uppercase;
     letter-spacing: -0.04em;
   }
 
   p {
-    font-weight: 200;
+    /* prefer the light font weight that is available (300) */
+    font-weight: 300;
   }
 
   * {
@@ -146,7 +154,7 @@
   body {
     @apply bg-background text-foreground transition-colors duration-300;
     font-feature-settings: "rlig" 1, "calt" 1;
-    font-family: "Okomito Medium", sans-serif;
+    font-family: "Okomito", sans-serif;
     letter-spacing: -0.04em;
   }
 }
@@ -235,7 +243,7 @@
     ),
     linear-gradient(90deg, var(--color-foreground), 0.1em, transparent 0.1em);
   background-size: 11.1% 11.1%;
-  opacity: 0.3;
+  opacity: 0.1;
 }
 
 .gsaptext > h2 {
@@ -250,4 +258,24 @@
   background-clip: text;
   -webkit-background-clip: text;
   line-height: 1.2;
+  font-family: "Okomito", sans-serif;
+  font-weight: 300;
+  text-transform: none;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+#smooth-wrapper {
+  height: 100%;
+  overflow: hidden; /* ScrollSmoother handles scrolling */
+}
+
+#smooth-content {
+  min-height: 100%;
+  /* allow normal flow inside */
+  will-change: transform;
 }

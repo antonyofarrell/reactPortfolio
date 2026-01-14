@@ -46,7 +46,7 @@ export const GsapSection = () => {
   return (
     <section
       id="gsap-section"
-      className="container mx-auto px-4 h-screen flex items-center justify-center"
+      className="mx-auto h-screen flex items-center justify-center"
       ref={containerRef}
     >
       <div className="p-8">
