@@ -4,8 +4,8 @@ export default function ParallaxImage({
   src,
   alt,
   className = "",
-  speed = 0.55, // higher = more movement
-  maxOffset = 60, // px clamp
+  speed = 1.0, // higher = more movement
+  maxOffset = 100, // px clamp
   // media options
   controls = false,
   loop = true,
@@ -15,7 +15,6 @@ export default function ParallaxImage({
 }) {
   const ref = useRef(null);
   const rafRef = useRef(null);
-  const lastScrollY = useRef(window.scrollY);
   const currentY = useRef(0);
   const targetY = useRef(0);
 
@@ -23,35 +22,38 @@ export default function ParallaxImage({
     const el = ref.current;
     if (!el) return;
 
-    const update = () => {
-      // Smooth interpolation
-      currentY.current += (targetY.current - currentY.current) * 0.1;
+    const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
 
+    const update = () => {
+      // Smooth interpolation toward target (faster smoothing)
+      currentY.current += (targetY.current - currentY.current) * 0.14;
       el.style.transform = `translate3d(0, ${currentY.current}px, 0)`;
       rafRef.current = requestAnimationFrame(update);
     };
 
-    const onScroll = () => {
-      const scrollY = window.scrollY;
-      const delta = scrollY - lastScrollY.current;
+    // Position-based handler (deterministic, avoids cumulative delta drift)
+    const handle = () => {
+      const rect = el.getBoundingClientRect();
+      const center = rect.top + rect.height / 2;
+      const viewportCenter = window.innerHeight / 2;
 
-      // Reverse direction so scroll down moves image up
-      targetY.current -= delta * speed;
+      // -1 .. 1 depending on element position in viewport
+      const rel = (viewportCenter - center) / (window.innerHeight / 2);
 
-      // Clamp
-      targetY.current = Math.max(
-        -maxOffset,
-        Math.min(maxOffset, targetY.current)
-      );
-
-      lastScrollY.current = scrollY;
+      // Map relative position to offset and clamp
+      targetY.current = clamp(-rel * maxOffset * speed, -maxOffset, maxOffset);
     };
 
+    // initial calculation
+    handle();
+
     rafRef.current = requestAnimationFrame(update);
-    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("scroll", handle, { passive: true });
+    window.addEventListener("resize", handle);
 
     return () => {
-      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("scroll", handle);
+      window.removeEventListener("resize", handle);
       if (rafRef.current) cancelAnimationFrame(rafRef.current);
     };
   }, [speed, maxOffset]);

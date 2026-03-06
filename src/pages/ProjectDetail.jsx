@@ -72,7 +72,7 @@ export default function ProjectDetail() {
               - mobile: aside (text) appears first and stays sticky above images
               - md+: images are shown left and aside sits on the right
           */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
               {/* Right column (text) — show first on mobile, last on md+ */}
               <aside className="md:col-span-1 order-first md:order-last">
                 <div

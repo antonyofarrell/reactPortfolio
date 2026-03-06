@@ -25,7 +25,7 @@ export const ContactSection = () => {
         "service_ri44axd", // replace with your EmailJS service ID
         "template_103i0p4", // replace with your EmailJS template ID
         e.target,
-        "djv2FVeVvl9nc2xX5" // replace with your EmailJS public key
+        "djv2FVeVvl9nc2xX5", // replace with your EmailJS public key
       )
       .then(
         (result) => {
@@ -43,7 +43,7 @@ export const ContactSection = () => {
               "There was an error sending your message. Please try again.",
           });
           setIsSubmitting(false);
-        }
+        },
       );
   };
 
@@ -62,12 +62,12 @@ export const ContactSection = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           <div className="space-y-6 justify-center">
-            <div className="flex justify-center space-x-4">
-              <div className="p-3 rounded-full flex items-center justify-center bg-primary/10">
+            <div className="flex justify-start space-x-4">
+              <div className="p-3 rounded-full flex items-center justify-start bg-primary/10">
                 <Mail className="h-6 w-6 text-primary" />
               </div>
               <div>
-                <h4 className="font-medium">Email</h4>
+                <h4 className="font-medium text-left">Email</h4>
                 <a
                   href="mailto:antonyofarrell@gmail.com"
                   className="text-muted-foreground hover:text-primary transition-colors"
@@ -77,12 +77,12 @@ export const ContactSection = () => {
               </div>
             </div>
 
-            <div className="flex justify-center space-x-4">
+            <div className="flex justify-start space-x-4">
               <div className="p-3 rounded-full flex items-center justify-center bg-primary/10">
                 <Phone className="h-6 w-6 text-primary" />
               </div>
               <div>
-                <h4 className="font-medium">Phone</h4>
+                <h4 className="font-medium text-left">Phone</h4>
                 <a
                   href="tel:+34615508165"
                   className="text-muted-foreground hover:text-primary transition-colors"
@@ -92,20 +92,20 @@ export const ContactSection = () => {
               </div>
             </div>
 
-            <div className="flex justify-center space-x-4">
+            <div className="flex justify-start space-x-4">
               <div className="p-3 rounded-full flex items-center justify-center bg-primary/10">
                 <Mail className="h-6 w-6 text-primary" />
               </div>
               <div>
-                <h4 className="font-medium">Location</h4>
+                <h4 className="font-medium text-left">Location</h4>
                 <a className="text-muted-foreground hover:text-primary transition-colors">
                   Barcelona, Spain
                 </a>
               </div>
             </div>
-            <div className=" flex flex-col justify-center pt-8">
-              <h4 className="font-medium mb-4">Connect with me</h4>
-              <div className="flex space-x-4 justify-center">
+            <div className=" flex flex-col justify-start pt-8">
+              <h4 className="font-medium mb-4 text-left">Connect with me</h4>
+              <div className="flex space-x-4 justify-start">
                 <a href="#" target="_blank" rel="noopener noreferrer">
                   <Linkedin />
                 </a>
@@ -178,7 +178,7 @@ export const ContactSection = () => {
                 type="submit"
                 disabled={isSubmitting}
                 className={cn(
-                  "cosmic-button w-full flex items-center justify-center gap-2"
+                  "cosmic-button w-full flex items-center justify-center gap-2",
                 )}
               >
                 <Send size={16} />{" "}
