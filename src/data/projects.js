@@ -1,9 +1,9 @@
 export const PROJECTS = [
   {
     id: "realise",
-    title: "Realise.me.uk — WordPress Website with Custom Motion Animation",
+    title: "Realise.me.uk",
     description:
-      "I designed and built Realise.me.uk, a fully responsive WordPress website for an event services company specialising in event registration, data-driven audience insights, training, and consultancy services. The site combines clean, professional branding with dynamic motion content to elevate the user experience and clearly communicate the breadth of Realise’s offerings.",
+      "Designed and built Realise.me.uk — a responsive WordPress site for an event services company, combining clean professional branding with dynamic motion content to showcase their registration, insights, and consultancy offerings.",
     image: "/projects/realise.webp",
     images: [
       "/projects/realise.webp",
@@ -12,6 +12,22 @@ export const PROJECTS = [
     ],
     tags: ["Branding", "Wordpress", "Frontend"],
     demoUrl: "https://realise.me.uk/",
+    gitHubUrl: "#",
+  },
+  {
+    id: "bcnDesignTours",
+    title: "BCN Design Tours",
+    description:
+      "Branding and website for a tour operator built with WordPress.",
+    image: "/projects/homepage1920.jpg",
+    images: [
+      "/projects/homepage1920.jpg",
+      "/projects/screensDiagonal.mp4",
+      "/projects/bcnDesignToursScreens.mp4",
+    ],
+
+    tags: ["UI/UX", "Branding", "HTML", "CSS", "Javascript"],
+    demoUrl: "https://barcelonadesigntours.com",
     gitHubUrl: "#",
   },
   {
