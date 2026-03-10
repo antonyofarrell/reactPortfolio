@@ -1,5 +1,20 @@
 export const PROJECTS = [
   {
+    id: "EE Broadband upsell",
+    title: "EE Broadband upsell",
+    description:
+      "Working with ee.co.uk we created various overlays to help convert customers to higher AOV products.",
+    image: "/projects/eecoukscreenshot.jpg",
+    images: [
+      "/projects/eecoukscreenshot.jpg",
+      "/projects/eeAnimation.mp4",
+      "/projects/eeOverlayPopup.mp4",
+    ],
+    tags: ["UI/UX", "Conversion", "HTML", "CSS"],
+    demoUrl: "https://ee.co.uk",
+    gitHubUrl: "#",
+  },
+  {
     id: "realise",
     title: "Realise.me.uk",
     description:
