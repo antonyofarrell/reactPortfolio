@@ -51,7 +51,12 @@ export const PROJECTS = [
     description:
       "Shopper journey optimisation for an e-commerce platform using Figma, HTML/CSS and Javascript.",
     image: "/projects/coachUpsell2.webp",
-    images: ["/projects/coach-1.webp", "/projects/coach-2.webp"],
+    images: [
+      "/projects/CoachPriceSlider1.jpg",
+      "/projects/coachRecomminder.jpg",
+      "/projects/CoachSignup2.jpg",
+      "CoachSignup3.jpg",
+    ],
     tags: ["UI/UX", "HTML", "CSS", "Javascript"],
     demoUrl: "https://uk.coach.com",
     gitHubUrl: "#",
