@@ -48,20 +48,23 @@ export const ContactSection = () => {
   };
 
   return (
-    <section id="contact" className="py-24 px-4 relative bg-secondary/30">
+    <section
+      id="contact"
+      className="py-12 md:py-24 px-4 relative bg-secondary/30"
+    >
       <div className="container mx-auto max-w-5xl">
         <h2 className="text-3xl md:text-4xl font-bold mb-4">
           Get in <span className="text-primary">touch</span>
         </h2>
 
-        <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
+        <p className="text-center text-muted-foreground mb-8 md:mb-12 max-w-2xl mx-auto">
           Have a project in mind or just want to say hi? Feel free to reach out!
           I'm always open to discussing new opportunities, collaborations, or
           answering any questions you may have.
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-          <div className="space-y-6 justify-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-12">
+          <div className="space-y-4 md:space-y-6 justify-center">
             <div className="flex justify-start space-x-4">
               <div className="p-3 rounded-full flex items-center justify-start bg-primary/10">
                 <Mail className="h-6 w-6 text-primary" />

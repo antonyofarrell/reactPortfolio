@@ -22,16 +22,19 @@ export const SkillsSection = () => {
   const [activeCategory, setActiveCategory] = useState("all");
 
   const filteredSkills = skills.filter(
-    (skill) => activeCategory === "all" || skill.category === activeCategory
+    (skill) => activeCategory === "all" || skill.category === activeCategory,
   );
   return (
-    <section id="skills" className="py-24 relative bg-secondary/30">
+    <section
+      id="skills"
+      className="py-12 md:py-24 px-4 relative bg-secondary/30"
+    >
       <div className="container mx-auto max-w-5xl">
-        <h2 className="text-3-xl md:text-4xl font-bold mb-12 text-center">
+        <h2 className="text-3-xl md:text-4xl font-bold mb-8 md:mb-12 text-center">
           My <span className="text-primary">Skills</span>
         </h2>
 
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
+        <div className="flex flex-wrap justify-center gap-2 md:gap-4 mb-8 md:mb-12">
           {categories.map((category, key) => (
             <button
               key={key}
@@ -40,7 +43,7 @@ export const SkillsSection = () => {
                 "px-5 py-2 rounded-full transition-colors duration-300 capitalize cursor-pointer hover:bg-secondary/90",
                 activeCategory === category
                   ? "bg-primary text-primary-foreground"
-                  : "bg-secondary/70 text-foreground hover:bg-secondary/20"
+                  : "bg-secondary/70 text-foreground hover:bg-secondary/20",
               )}
             >
               {category}
@@ -48,11 +51,11 @@ export const SkillsSection = () => {
           ))}
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2  md:grid-cols-3 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-3 md:gap-6">
           {filteredSkills.map((skill, key) => (
             <div
               key={key}
-              className="bg-card p-6 rounded-lg shadow-xs card-hover"
+              className="bg-card p-3 md:p-6 rounded-lg shadow-xs card-hover"
             >
               <div className="text-left mb-4">
                 <h3 className="font-semibold text-lg">{skill.name}</h3>

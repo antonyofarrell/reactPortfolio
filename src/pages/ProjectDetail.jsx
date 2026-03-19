@@ -41,7 +41,7 @@ export default function ProjectDetail() {
       <Navbar /> {/* added navbar here */}
       <ThemeToggle />
       <SmoothScrollProvider>
-        <main className="min-h-screen p-8 pt-20">
+        <main className="min-h-screen p-1 md:p-8 pt-30 mt-3 md:mt-10">
           <div className="container mx-auto max-w-6xl">
             <div className="mb-6 flex items-center justify-between">
               <Link to="/#projects" className="text-sm underline">
@@ -72,11 +72,11 @@ export default function ProjectDetail() {
               - mobile: aside (text) appears first and stays sticky above images
               - md+: images are shown left and aside sits on the right
           */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 items-start">
               {/* Right column (text) — show first on mobile, last on md+ */}
               <aside className="md:col-span-1 order-first md:order-last">
                 <div
-                  className="sticky self-start p-6 bg-card rounded-xl shadow"
+                  className="sticky self-start p-4 md:p-6 bg-card rounded-xl shadow"
                   style={{ top: "calc(var(--navbar-height, 4rem) + 0.75rem)" }}
                 >
                   <h1 className="text-2xl md:text-3xl font-semibold mb-3 text-left">
