@@ -106,17 +106,26 @@ export const ContactSection = () => {
             <div className=" flex flex-col justify-start pt-8">
               <h4 className="font-medium mb-4 text-left">Connect with me</h4>
               <div className="flex space-x-4 justify-start">
-                <a href="#" target="_blank" rel="noopener noreferrer">
+                <a
+                  href="https://www.linkedin.com/in/antony-o-farrell/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <Linkedin />
                 </a>
-                <a href="#" target="_blank" rel="noopener noreferrer">
+                <a
+                  href="https://www.instagram.com/antonyofarrell/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <Instagram />
                 </a>
-                <a href="#" target="_blank" rel="noopener noreferrer">
+                <a
+                  href="https://www.facebook.com/antony.ofarrell/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <Facebook />
-                </a>
-                <a href="#" target="_blank" rel="noopener noreferrer">
-                  <Twitch />
                 </a>
               </div>
             </div>
