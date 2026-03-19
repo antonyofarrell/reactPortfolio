@@ -33,8 +33,8 @@ export default function ProjectDetail() {
     project.images && project.images.length
       ? project.images
       : project.image
-      ? [project.image]
-      : [];
+        ? [project.image]
+        : [];
 
   return (
     <>
@@ -83,7 +83,7 @@ export default function ProjectDetail() {
                     {project.title}
                   </h1>
 
-                  <div className="flex flex-wrap gap-2 mb-4">
+                  <div className="flex flex-wrap gap-1 mb-4">
                     {project.tags?.map((t) => (
                       <span
                         key={t}
@@ -109,7 +109,7 @@ export default function ProjectDetail() {
                         Live demo
                       </a>
                     )}
-                    {project.gitHubUrl && (
+                    {/* {project.gitHubUrl && (
                       <a
                         href={project.gitHubUrl}
                         target="_blank"
@@ -118,7 +118,7 @@ export default function ProjectDetail() {
                       >
                         Source
                       </a>
-                    )}
+                    )} */}
                   </div>
 
                   <div className="flex justify-between">

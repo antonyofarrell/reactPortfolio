@@ -15,6 +15,20 @@ export const PROJECTS = [
     gitHubUrl: "#",
   },
   {
+    id: "Montblanc",
+    title: "Montblanc Email Design",
+    description:
+      "Designed and built a series of email templates for Montblanc, focusing on clean aesthetics and responsive design to enhance customer engagement across devices.",
+    image: "/projects/montblankEmail.jpg",
+    images: [
+      "/projects/montblankEmail.jpg",
+      "/projects/montblankScreenShot.mp4",
+    ],
+    tags: ["Email Design", "Conversion", "HTML", "MJML"],
+    demoUrl: "https://montblanc.com",
+    gitHubUrl: "#",
+  },
+  {
     id: "realise",
     title: "Realise.me.uk",
     description:
