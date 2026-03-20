@@ -5,7 +5,7 @@ export default function ParallaxImage({
   alt,
   className = "",
   speed = 1.0, // higher = more movement
-  maxOffset = 100, // px clamp
+  maxOffset = 150, // px clamp
   // media options
   controls = false,
   loop = true,

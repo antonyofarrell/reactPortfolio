@@ -41,7 +41,7 @@ export default function ProjectDetail() {
       <Navbar /> {/* added navbar here */}
       <ThemeToggle />
       <SmoothScrollProvider>
-        <main className="min-h-screen p-1 md:p-8 pt-30 mt-3 md:mt-10">
+        <main className="min-h-screen px-1 py-32 md:p-8 pt-30 mt-3 md:mt-10">
           <div className="container mx-auto max-w-6xl">
             <div className="mb-6 flex items-center justify-between">
               <Link to="/#projects" className="text-sm underline">
@@ -148,7 +148,7 @@ export default function ProjectDetail() {
               </aside>
 
               {/* Left column: stacked images — show after aside on mobile, left on md+ */}
-              <div className="md:col-span-2 space-y-6 order-last md:order-first">
+              <div className="md:col-span-2 space-y-6 order-last md:order-first pb-24">
                 {images.map((src, i) => (
                   <div
                     key={i}

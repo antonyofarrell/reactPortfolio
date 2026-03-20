@@ -82,9 +82,9 @@ export const PROJECTS = [
       "A company website for a reflexologist built with Wordpress and using Divi theme.",
     image: "/projects/sammeallen.webp",
     images: [
-      "/projects/reflex-1.webp",
-      "/projects/reflex-2.webp",
-      "/projects/reflex-3.webp",
+      "/projects/sammeallen.webp",
+      "/projects/sameeallenShowcase.mp4",
+      "/projects/sammeAllen.jpg",
     ],
     tags: ["Wordpress", "Branding", "CSS"],
     demoUrl: "https://sammeallen.com",
