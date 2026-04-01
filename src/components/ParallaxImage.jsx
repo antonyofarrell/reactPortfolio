@@ -26,7 +26,7 @@ export default function ParallaxImage({
 
     const update = () => {
       // Smooth interpolation toward target (faster smoothing)
-      currentY.current += (targetY.current - currentY.current) * 0.14;
+      currentY.current += (targetY.current - currentY.current) * 0.25;
       el.style.transform = `translate3d(0, ${currentY.current}px, 0)`;
       rafRef.current = requestAnimationFrame(update);
     };

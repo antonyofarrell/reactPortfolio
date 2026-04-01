@@ -22,7 +22,7 @@ export const PROJECTS = [
     image: "/projects/montblankEmail.jpg",
     images: [
       "/projects/montblankEmail.jpg",
-      "/projects/montblankScreenShot.mp4",
+      "/projects/montblankScreenShot2.mp4",
     ],
     tags: ["Email Design", "Conversion", "HTML", "MJML"],
     demoUrl: "https://montblanc.com",
